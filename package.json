@@ -1,0 +1,14 @@
+{
+  "name": "nathanbaylon",
+  "version": "1.0.0",
+  "description": "A personal portfolio website for Nathan Baylon",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bayl0n/nathanbaylon.git"
+  },
+  "author": "Nathan Baylon",
+  "license": "ISC"
+}
