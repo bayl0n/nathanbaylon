@@ -41,4 +41,4 @@ async function createCarousel(carouselList, eleRef) {
     }
 }
 
-export { createCarousel };
+export { writeSentence, deleteSentence, waitForMs, createCarousel };

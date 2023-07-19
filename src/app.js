@@ -1,7 +1,9 @@
-import { createCarousel } from "./modules/typeCarousel.js";
+import { writeSentence, deleteSentence, waitForMs, createCarousel } from "./modules/typeCarousel.js";
 
-window.onload = () => {
+// Don't forget to remove the async once ugly code is removed
+window.onload = async () => {
     const typeSentence = document.getElementById("type-sentence");
+    const ellipses = document.getElementById("ellipses");
 
     const carouselText = [
         { text: "Nathan Baylon.", color: "#000000" },
@@ -10,4 +12,12 @@ window.onload = () => {
     ]
 
     createCarousel(carouselText, typeSentence);
+
+    // Really ugly code but leaving this here temporarily
+    while(true) {
+        await writeSentence("...", ellipses, 200);
+        await waitForMs(1000);
+        await deleteSentence(ellipses, 200);
+        await waitForMs(500);
+    }
 }
