@@ -1,3 +1,4 @@
+/* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,9 +43,62 @@ table {
 	border-spacing: 0;
 }
 
+/* Font */
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans.ttf");
+}
+
+html {
+    font-family: "Open Sans";
+}
+
+/* Main Styles */
+
 .navbar {
-    height: 5rem;
+    position: fixed;
+    top: 0;
+    height: 3rem;
+    width: 100%;
     background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(16px);
+}
+
+.window-button-container {
+    float: left;
+    display: flex;
+}
+
+.window-button:first-child {
+    background-color: #FF605C;
+}
+
+.window-button:nth-child(2) {
+    background-color: #FFBD44;
+}
+
+.window-button:last-child {
+    background-color: #00CA4E;
+}
+
+.window-button {
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    margin: 0 8px;
+    background-color: white;
+}
+
+.navbar-heading {
+    display: none;
+    font-size: 2rem;
+    color: #FFFFFF;
 }
 
 .navbar > ul {
@@ -52,27 +106,45 @@ table {
     height: 100%;
     align-items: center;
     justify-content: center;
-}
-
-li {
+    padding: 1rem;
     margin: 0 1rem;
 }
 
-a {
+.navbar > ul > li {
+    margin: 0 1rem;
+}
+
+.navbar > ul > li > a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
 .hero-section {
-    margin: 1rem 0;
+    background-color: #ffffff;
+    height: 540px;
+    margin: 3rem 0 0 0;
+    padding: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+.hero-container {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .hero-heading {
     font-weight: 600;
     font-size: 4rem;
+}
+
+.hero-subheading {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #555555;
 }
 
 .type-cursor {
@@ -82,8 +154,29 @@ a {
     margin-left: 0.5rem;
     background-color: #000000;
     animation: blink .6s linear infinite alternate;
+    z-index: -1;
 }
 
+.bio-section {
+    background-color: #1F51FF;
+    height: 1540px;
+}
+
+/* Breakpoints */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+    }
+    .navbar-heading {
+        display: none;
+    }
+
+    .window-button-container {
+        display: none;
+    }
+}
+
+/* Animations */
 @keyframes blink {
     0% { opacity: 1;}
     40% { opacity: 1;}

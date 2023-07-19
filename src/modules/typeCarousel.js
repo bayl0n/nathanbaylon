@@ -10,7 +10,7 @@ async function writeSentence(sentence, eleRef, delay = 100) {
     }
 }
 
-async function deleteSentence(eleRef, delay = 100) {
+async function deleteSentence(eleRef, delay = 75) {
     const sentence = eleRef.innerHTML;
     const letters = sentence.split("");
 
@@ -32,7 +32,7 @@ async function createCarousel(carouselList, eleRef) {
         eleRef.style.color = carouselList[i].color;
 
         await writeSentence(carouselList[i].text, eleRef);
-        await waitForMs(1500);
+        await waitForMs(2000);
         await deleteSentence(eleRef);
         await waitForMs(500);
 
