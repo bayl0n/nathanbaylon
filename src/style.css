@@ -192,6 +192,7 @@ html {
 }
 
 .hero-heading {
+    font-family: "Product Sans";
     font-weight: 400;
     font-size: 2rem;
 }
@@ -238,7 +239,7 @@ html {
 
 .bio-section {
     background-color: #0099ff;
-    height: 360px;
+    min-height: 360px;
     margin: -4px 0 0 0;
     padding: 0 4rem;
     color: #FFFFFF;
@@ -268,7 +269,7 @@ html {
 
 .bio-midshot {
     margin-top: auto;
-    height: 360px;
+    height: 320px;
 }
 
 .projects-section {
@@ -286,7 +287,7 @@ html {
 }
 
 /* Breakpoints */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 730px) {
     .navbar {
         justify-content: center;
     }
@@ -312,12 +313,22 @@ html {
     }
 
     .hero-heading {
+        font-family: "Product Sans";
         font-weight: 400;
-        font-size: 2rem;
     }
 
     .search-icon {
         display: none;
+    }
+
+    .bio-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio-midshot {
+        margin: auto;
+        height: 200px;
     }
 }
 
