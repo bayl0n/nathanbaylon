@@ -330,6 +330,10 @@ html {
         margin: auto;
         height: 200px;
     }
+
+    .tbc {
+        font-size: 2rem;
+    }
 }
 
 /* Animations */
