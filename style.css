@@ -60,21 +60,7 @@ html {
 
 /* Main Styles */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    height: 3rem;
-    width: 100%;
-    background-color: #000000;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: saturate(180%) blur(16px);
-}
-
+/* Window */
 .window-button-container {
     float: left;
     display: flex;
@@ -98,6 +84,22 @@ html {
     border-radius: 100%;
     margin: 0 8px;
     background-color: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(16px);
 }
 
 .navbar-heading {
@@ -124,16 +126,7 @@ html {
     color: #FFFFFF;
 }
 
-.hero-section {
-    background-color: #ffffff;
-    height: 480;
-    margin: 3rem 0 0 0;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
+/* Google-inspired Elements*/
 .google-name {
     font-family: "Product Sans";
     font-weight: 800;
@@ -165,6 +158,33 @@ html {
     color: #db3236;
 }
 
+.google-button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: #f1f1f1;
+    color: #5F6368;
+}
+
+.google-button:hover {
+    color: #2a2a2a;
+    border: 1px solid #a1a1a1;
+    box-shadow: 0rem 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0.10);
+}
+
+/* Hero */
+.hero-section {
+    background-color: #ffffff;
+    height: 480;
+    margin: 3rem 0 0 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .hero-container {
     margin: auto 0;
     display: flex;
@@ -185,12 +205,6 @@ html {
     box-shadow: 0rem 0.1rem 0.5rem 0rem rgba(0, 0, 0, 0.30);
 }
 
-.search-icon {
-    width: 2rem;
-    color: rgb(166, 166, 166);
-    stroke-width: 2px;
-}
-
 .hero-heading {
     font-family: "Product Sans";
     font-weight: 400;
@@ -203,6 +217,14 @@ html {
     color: #555555;
 }
 
+/* Search */
+.search-icon {
+    width: 2rem;
+    color: rgb(166, 166, 166);
+    stroke-width: 2px;
+}
+
+/* Type */
 .type-cursor {
     display: inline-block;
     width: 0.1rem;
@@ -213,26 +235,12 @@ html {
     z-index: -1;
 }
 
+/* Call to action */
 .cta-container {
     margin: 4rem 0 0 0;
 }
 
-.google-button {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 0.3rem;
-    font-size: 1.2rem;
-    border: 1px solid rgba(0, 0, 0, 0);
-    background-color: #f1f1f1;
-    color: #5F6368;
-}
-
-.google-button:hover {
-    color: #2a2a2a;
-    border: 1px solid #a1a1a1;
-    box-shadow: 0rem 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0.10);
-}
-
+/* Bio */
 .bio-wave {
     fill: #0099ff;
 }
@@ -272,6 +280,7 @@ html {
     height: 320px;
 }
 
+/* Projects */
 .projects-section {
     height: 360px;
     display: flex;
@@ -279,6 +288,7 @@ html {
     justify-content: center;
 }
 
+/* To be continued */
 .tbc {
     font-family: "Product Sans";
     margin: auto 0;
@@ -287,6 +297,8 @@ html {
 }
 
 /* Breakpoints */
+
+/* Small/Medium */
 @media only screen and (max-width: 730px) {
     .navbar {
         justify-content: center;
