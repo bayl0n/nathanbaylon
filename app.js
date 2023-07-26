@@ -8,7 +8,7 @@ window.onload = async () => {
     const carouselText = [
         { text: "Nathan Baylon.", color: "#000000" },
         { text: "a software developer.", color: "#c21e56" },
-        { text: "a content creator.", color: "#6495ED" },
+        { text: "a problem solver.", color: "#6495ED" },
     ]
 
     createCarousel(carouselText, typeSentence);
