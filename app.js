@@ -7,7 +7,7 @@ window.onload = async () => {
 
     const carouselText = [
         { text: "Nathan Baylon.", color: "#000000" },
-        { text: "a software developer.", color: "#c21e56" },
+        { text: "a software dev.", color: "#c21e56" },
         { text: "a problem solver.", color: "#6495ED" },
     ]
 
