@@ -61,24 +61,24 @@ html {
 /* Main Styles */
 
 /* Window */
-.window-button-container {
+.window--button-container {
     float: left;
     display: flex;
 }
 
-.window-button:first-child {
+.window--button:first-child {
     background-color: #FF605C;
 }
 
-.window-button:nth-child(2) {
+.window--button:nth-child(2) {
     background-color: #FFBD44;
 }
 
-.window-button:last-child {
+.window--button:last-child {
     background-color: #00CA4E;
 }
 
-.window-button {
+.window--button {
     height: 16px;
     width: 16px;
     border-radius: 100%;
@@ -102,7 +102,7 @@ html {
     backdrop-filter: saturate(180%) blur(16px);
 }
 
-.navbar-heading {
+.navbar--heading {
     display: none;
     font-size: 2rem;
     color: #FFFFFF;
@@ -127,38 +127,38 @@ html {
 }
 
 /* Google-inspired Elements*/
-.google-name {
+.google--name {
     font-family: "Product Sans";
     font-weight: 800;
     font-size: 8rem;
     margin: 4rem;
 }
 
-.google-name span:first-child {
+.google--name span:first-child {
     color: #4885ed;
 }
 
-.google-name span:nth-child(2) {
+.google--name span:nth-child(2) {
     color: #db3236;
 }
 
-.google-name span:nth-child(3) {
+.google--name span:nth-child(3) {
     color: #f4c20d;
 }
 
-.google-name span:nth-child(4) {
+.google--name span:nth-child(4) {
     color: #4885ed;
 }
 
-.google-name span:nth-child(5) {
+.google--name span:nth-child(5) {
     color: #3cba54;
 }
 
-.google-name span:last-child {
+.google--name span:last-child {
     color: #db3236;
 }
 
-.google-button {
+.google--button {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     border-radius: 0.3rem;
@@ -168,14 +168,14 @@ html {
     color: #5F6368;
 }
 
-.google-button:hover {
+.google--button:hover {
     color: #2a2a2a;
     border: 1px solid #a1a1a1;
     box-shadow: 0rem 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0.10);
 }
 
 /* Hero */
-.hero-section {
+.hero--section {
     background-color: #ffffff;
     height: 480;
     margin: 3rem 0 0 0;
@@ -185,14 +185,14 @@ html {
     flex-direction: column;
 }
 
-.hero-container {
+.hero--container {
     margin: auto 0;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.hero-heading-container {
+.hero--heading-container {
     display: flex;
     gap: 1rem;
     text-align: left;
@@ -201,31 +201,31 @@ html {
     border-radius: 4rem;
 }
 
-.hero-heading-container:hover {
+.hero--heading-container:hover {
     box-shadow: 0rem 0.1rem 0.5rem 0rem rgba(0, 0, 0, 0.30);
 }
 
-.hero-heading {
+.hero--heading {
     font-family: "Product Sans";
     font-weight: 400;
     font-size: 2rem;
 }
 
-.hero-subheading {
+.hero--subheading {
     margin: 1rem;
     font-size: 1.5rem;
     color: #555555;
 }
 
 /* Search */
-.search-icon {
+.search--icon {
     width: 2rem;
     color: rgb(166, 166, 166);
     stroke-width: 2px;
 }
 
 /* Type */
-.type-cursor {
+.type--cursor {
     display: inline-block;
     width: 0.1rem;
     height: 2rem;
@@ -236,16 +236,16 @@ html {
 }
 
 /* Call to action */
-.cta-container {
+.cta--container {
     margin: 4rem 0 0 0;
 }
 
 /* Bio */
-.bio-wave {
+.bio--wave {
     fill: #0099ff;
 }
 
-.bio-section {
+.bio--section {
     background-color: #0099ff;
     min-height: 360px;
     margin: -4px 0 0 0;
@@ -256,18 +256,18 @@ html {
     gap: 1rem;
 }
 
-.bio-pic {
+.bio--pic {
     height: 240px;
 }
 
-.bio-heading {
+.bio--heading {
     font-family: "Product Sans";
     font-size: 3rem;
     font-weight: 600;
     margin: 1rem 0;
 }
 
-.bio-body {
+.bio--body {
     font-size: 1rem;
     font-weight: 500;
     max-width: 480px;
@@ -275,13 +275,13 @@ html {
     line-height: 1.2rem;
 }
 
-.bio-midshot {
+.bio--midshot {
     margin-top: auto;
     height: 320px;
 }
 
 /* Projects */
-.projects-section {
+.projects--section {
     height: 360px;
     display: flex;
     text-align: center;
@@ -303,42 +303,42 @@ html {
     .navbar {
         justify-content: center;
     }
-    .navbar-heading {
+    .navbar--heading {
         display: none;
     }
 
-    .window-button-container {
+    .window--button-container {
         display: none;
     }
 
-    .google-name {
+    .google--name {
         font-size: 4rem;
     }
 
-    .hero-heading-container {
+    .hero--heading-container {
         text-align: center;
         border: none;
     }
 
-    .hero-heading-container:hover {
+    .hero--heading-container:hover {
         box-shadow: none;
     }
 
-    .hero-heading {
+    .hero--heading {
         font-family: "Product Sans";
         font-weight: 400;
     }
 
-    .search-icon {
+    .search--icon {
         display: none;
     }
 
-    .bio-section {
+    .bio--section {
         flex-direction: column;
         text-align: center;
     }
 
-    .bio-midshot {
+    .bio--midshot {
         margin: auto;
         height: 200px;
     }
