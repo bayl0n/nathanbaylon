@@ -199,6 +199,7 @@ html {
     padding: 1rem;
     border: 1px solid rgb(166, 166, 166);
     border-radius: 4rem;
+    min-width: 540px
 }
 
 .hero--heading-container:hover {
@@ -209,6 +210,7 @@ html {
     font-family: "Product Sans";
     font-weight: 400;
     font-size: 2rem;
+    padding: 0px;
 }
 
 .hero--subheading {
@@ -221,7 +223,7 @@ html {
 .search--icon {
     width: 2rem;
     color: rgb(166, 166, 166);
-    stroke-width: 2px;
+    stroke-width: 3px;
 }
 
 /* Type */
@@ -229,7 +231,6 @@ html {
     display: inline-block;
     width: 0.1rem;
     height: 2rem;
-    margin-left: 0.5rem;
     background-color: #000000;
     animation: blink .6s linear infinite alternate;
     z-index: -1;
@@ -316,8 +317,7 @@ html {
     }
 
     .hero--heading-container {
-        text-align: center;
-        border: none;
+        all: unset;
     }
 
     .hero--heading-container:hover {
@@ -340,7 +340,7 @@ html {
 
     .bio--midshot {
         margin: auto;
-        height: 200px;
+        max-height: 200px;
     }
 
     .tbc {
