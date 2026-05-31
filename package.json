@@ -2,13 +2,19 @@
   "name": "nathanbaylon",
   "version": "1.0.0",
   "description": "A personal portfolio website for Nathan Baylon",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/bayl0n/nathanbaylon#readme",
+  "bugs": {
+    "url": "https://github.com/bayl0n/nathanbaylon/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bayl0n/nathanbaylon.git"
+    "url": "git+https://github.com/bayl0n/nathanbaylon.git"
   },
+  "license": "MIT",
   "author": "Nathan Baylon",
-  "license": "ISC"
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

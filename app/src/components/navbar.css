@@ -1,0 +1,39 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 3rem;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(16px);
+}
+
+.navbar--heading {
+  display: none;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.navbar > ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar > ul > li {
+  margin: 0 1rem;
+}
+
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
