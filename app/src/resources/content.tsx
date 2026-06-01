@@ -22,7 +22,7 @@ const person: Person = {
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -71,17 +71,17 @@ const home: Home = {
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Hi, I'm {person.firstName}.</>,
   featured: {
-    display: false,
+    display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured work</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Click to view
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/coral-rag-agent",
   },
   subline: (
     <>
@@ -138,9 +138,9 @@ const about: About = {
             ~85% of Rest's advice interactions.
           </>,
           <>
-            Championed onboarding documentation and resources to help
-            contractors accelerate delivery, reducing onboarding time from one
-            week to three days.
+            Championed technical onboarding documentation and resources to help
+            contractors set up development environments and accelerate delivery,
+            reducing onboarding time from one week to three days.
           </>,
         ],
         images: [],
@@ -183,7 +183,7 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Education",
     institutions: [
       {
@@ -193,7 +193,7 @@ const about: About = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false,
     title: "Technical skills",
     skills: [
       {
@@ -245,7 +245,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Hear me out...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -254,8 +254,8 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  title: `What I've worked on`,
+  description: `Dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

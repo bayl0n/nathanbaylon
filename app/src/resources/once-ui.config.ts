@@ -25,7 +25,7 @@ const routes: RoutesConfig = {
 };
 
 const display: DisplayConfig = {
-  location: true,
+  location: false,
   time: true,
   themeSwitcher: true,
 };
@@ -74,11 +74,11 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | mint | rose | dusk | custom
+  neutral: "slate", // sand | gray | slate | mint | rose | dusk | custom
   brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
+  solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative | sharp
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
@@ -101,13 +101,13 @@ const dataStyle: DataStyleConfig = {
 
 const effects: EffectsConfig = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
     radius: 100,
   },
   gradient: {
-    display: false,
+    display: true,
     opacity: 100,
     x: 50,
     y: 60,
@@ -124,11 +124,11 @@ const effects: EffectsConfig = {
     color: "brand-background-strong",
   },
   grid: {
-    display: false,
+    display: true,
     opacity: 100,
     color: "neutral-alpha-medium",
-    width: "0.25rem",
-    height: "0.25rem",
+    width: "3rem",
+    height: "3rem",
   },
   lines: {
     display: false,
@@ -188,9 +188,9 @@ const mailchimp: MailchimpConfig = {
 const schema: SchemaConfig = {
   logo: "",
   type: "Organization",
-  name: "Once UI",
+  name: "Nathan Baylon",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "nathanbaylon@gmail.com",
 };
 
 // social links

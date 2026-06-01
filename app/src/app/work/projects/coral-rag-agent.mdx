@@ -1,0 +1,40 @@
+---
+title: "Coral Active's First AI Agent: The Coral RAG Agent"
+publishedAt: "2025-03-02"
+summary: "A case study on building Coral Active's first AI agent, the Coral RAG Agent, which provides real-time information retrieval and response generation capabilities from Coral's interal Confluence knowledge base."
+images:
+  - "/images/projects/RAG/RAGDEMO.png"
+team:
+  - name: "Nathan Baylon"
+    role: "Software Engineer"
+    avatar: "/images/profile1.jpg"
+    linkedIn: "https://www.linkedin.com/in/nathan-baylon-3633741a1/"
+---
+
+## Overview
+
+Alongside weekly AI seminars I was running at Coral Active, I built the Coral RAG Agent, an AI agent that provides real-time information retrieval and response generation capabilities from Coral's internal Confluence knowledge base. The agent is designed to assist employees in quickly accessing relevant information and generating responses based on the retrieved data from internal documentation and generate code snippets using the Coral SDK.
+
+## Key Features
+
+- **Real-time Information Retrieval**: The agent can access and retrieve information from Coral's internal Confluence knowledge base.
+- **Code Generation**: The agent can generate code snippets using the Coral SDK.
+
+## Technologies Used
+
+- **LangChain**: For chunking to prepare the data for retrieval.
+- **Ollama**: For local language model hosting.
+- **HuggingFace**: For the embedding model used in the retrieval process.
+- **Python**: For orchestrating the backend services.
+
+## Challenges and Learnings
+
+The main feature I had wanted to showcase was that it had to be able to accurately give information based on Coral's documentation and to minimise hallucination.
+
+For this, success was evaluated via confidence scores by the relevancy of the chunks the embedding model retrieved within the RAG pipeline. In addition, a guard rail was put in place where if a top confidence score during retrieval was not found above a certain threshold, then the LLM was prompted to tell the user that no information on the query could not be found within the documention.
+
+Putting this into place was very effective and greatly reduced hallucinations, and the relevancy threshold during retrieval was able to set as a parameter to determine how vague the context was allowed to be.
+
+## Outcome
+
+This project was a huge opportunity for learning and growth for me as a developer. It allowed me to move pragmatically and utilise the skills I've learned academically in a professional setting. The AI seminars I had presented as well also allowed me to look deeper into talking points that companies would be concerned about that are sometimes overlooked at a technical level, such as ethics and privacy with AI usage.
