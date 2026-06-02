@@ -10,6 +10,7 @@ import {
   Schema,
   Meta,
   Line,
+  TypeFx,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
@@ -72,7 +73,7 @@ export default function Home() {
             paddingBottom="16"
           >
             <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
+              <TypeFx words={home.headline} speed={100} delay={1000} />
             </Heading>
           </RevealFx>
           <RevealFx
@@ -100,21 +101,21 @@ export default function Home() {
               id="about"
               data-border="rounded"
               href={about.path}
-              variant="secondary"
+              variant="primary"
               size="l"
               weight="default"
               arrowIcon
             >
               <Row gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
+                {/* {about.avatar.display && (
                   <Avatar
                     marginRight="8"
                     style={{ marginLeft: "-0.75rem" }}
                     src={person.avatar}
                     size="m"
                   />
-                )}
-                {about.title}
+                )} */}
+                Get to know me!
               </Row>
             </Button>
           </RevealFx>
