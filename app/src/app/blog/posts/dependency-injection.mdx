@@ -1,0 +1,215 @@
+---
+title: "OOP: Dependency Injection"
+summary: "A deep dive into dependency injection, one of the key principles of object oriented programming."
+publishedAt: "2024-05-27"
+image: "/images/thumbnails/dependency-injection.png"
+tag: "Object Oriented Programming"
+---
+
+# Dependency Injection
+
+Dependency injection is an OOP technique where code that is relied upon in an object is inserted without declarations.
+
+For instance, take a `Computer` class that depends on an `CPU` from Intel and a `GPU` from Nvidia class to run some of it's functions.
+
+<CodeBlock
+	codes={[
+		{
+			language: "cpp",
+			label: "C++",
+			code: `class nvidiaAndIntelComputer {
+		private:
+			GPU graphicsCard = new GPU("NVIDIA");
+			CPU processor = new CPU("INTEL");
+
+    public:
+    	 void boot() {
+    		graphicsCard.init();
+    		processor.init();
+    	}
+
+};`
+}
+]} />
+
+This is a bad way of injecting the `GPU` and `CPU` classes because if `NVIDIA` or `INTEL` are no longer supported by the `GPU` and `CPU` classes, that would also break the `Computer` class.
+Injecting dependencies this way also makes the `Computer` class **untestable**, as we can't replace the `NVIDIA` instance for say, an `AMD` instance. In order to include other `GPU` and `CPU` instances, you would have to create another class altogether.
+
+<CodeBlock
+	codes={[
+	{
+		language: "cpp",
+		label: "C++",
+		code: `class amdAndIntelComputer {
+		private:
+			GPU graphicsCard = new GPU("AMD");
+			CPU processor = new CPU("INTEL");
+
+    public:
+    	 void boot() {
+    		graphicsCard.init();
+    		processor.init();
+    	}
+    };`
+
+}]} />
+
+As you can see, this is a very redundant and inelegant way to inject dependent code. So...
+
+# How do we do it?
+
+There are more sensible ways to inject dependent code. The most common is using a **constructor**.
+
+## Constructor Injection
+
+<CodeBlock
+	codes={[
+		{
+			language: "cpp",
+			label: "C++",
+			code: `class Computer {
+		private:
+			GPU graphicsCard;
+			CPU processor;
+
+    public:
+    	void Computer(GPU gpu, CPU cpu) {
+    		graphicsCard = gpu;
+    		processor = cpu;
+    	}
+
+    	 void boot() {
+    		graphicsCard.init();
+    		processor.init();
+    	}
+    };`
+    }]} />
+
+Here, a `Computer()` constructor is used to inject the `GPU` and `CPU` classes into the `Computer` class. An identical `Computer` instance can be created using this new constructor:
+
+<CodeBlock
+  codes={[
+    {
+      language: "cpp",
+      label: "C++",
+      code: `Computer myComputer = new Computer(new GPU("NVIDIA"), new CPU("INTEL"));`,
+    },
+  ]}
+/>
+
+This also solves the previous problem, as you can now create `AMD` and `INTEL` computers using the same class.
+
+<CodeBlock
+  codes={[
+    {
+      language: "cpp",
+      label: "C++",
+      code: `Computer myComputer = new Computer(new GPU("AMD"), new CPU("INTEL"));`,
+    },
+  ]}
+/>
+
+# Other Dependency Injection Techniques
+
+Although, majority of the time the most reasonable way to inject dependent code is to use a constructor, there are also more dependency injection techniques.
+
+## Method Injection
+
+Similarly to using a constructor, Method Injection uses a class method, most commonly a `setter` function in order to set the instance.
+
+<CodeBlock
+  codes={[
+    {
+      language: "cpp",
+      label: "C++",
+      code: `class Computer {
+		private:
+			GPU graphicsCard;
+			CPU processor;
+
+    public:
+    	void setGPU(GPU gpu) {
+    		graphicsCard = gpu;
+    	}
+
+    	void setCPU(CPU cpu) {
+    		processor = cpu;
+    	}
+
+    	 void boot() {
+    		graphicsCard.init();
+    		processor.init();
+    	}
+    };`,
+    },
+    ]}
+    />
+
+Then to set the `GPU` and `CPU` instances, you can then call these setter functions.
+
+<CodeBlock
+  codes={[
+    {
+      language: "cpp",
+      label: "C++",
+      code: `Computer myComputer = new Computer();
+
+myComputer.setGPU(new GPU('NVIDIA'));
+myComputer.setCPU(new GPU('INTEL'));`,
+},
+]}
+/>
+
+While this seems to solve the problem, there are still issues if a method were called and the `GPU` and `CPU` instances have not been set yet.
+
+<CodeBlock
+  codes={[
+	{
+		highlight: 3,
+		language: "cpp",
+		label: "C++",
+		code: `Computer myComputer = new Computer();
+
+myComputer.boot(); // This could cause an error
+
+myComputer.setGPU(new GPU('NVIDIA'));
+myComputer.setCPU(new GPU('INTEL'));`,
+},
+]}
+/>
+
+## Field Injection
+
+This is when you make the object fields public and set the dependencies directly. This is very unsafe as that means that anything can directly edit the fields of your object and is not recommended.
+
+<CodeBlock
+  codes={[
+	{
+		language: "cpp",
+		label: "C++",
+		code:
+`class Computer {
+		public:
+			GPU graphicsCard;
+			CPU processor;
+
+    	 void boot() {
+    		graphicsCard.init();
+    		processor.init();
+    	}
+
+};`,
+}]}/>
+
+And the fields can be set like this.
+
+<CodeBlock
+	codes={[{
+		language: "cpp",
+		label: "C++",
+		code:
+`Computer myComputer = new Computer();
+
+myComputer.graphicsCard = new GPU('NVIDIA');
+myComputer.processor = new GPU('INTEL');`
+}]}/>
