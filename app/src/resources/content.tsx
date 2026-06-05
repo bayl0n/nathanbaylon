@@ -53,7 +53,7 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@bayl0n",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -74,14 +74,14 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Featured work</strong>{" "}
+        <strong className="ml-4">Latest work</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Click to view
+          Rakan: A Personal Finance Management App
         </Text>
       </Row>
     ),
-    href: "/work/coral-rag-agent",
+    href: "/work/rakan",
   },
   subline: (
     <>
