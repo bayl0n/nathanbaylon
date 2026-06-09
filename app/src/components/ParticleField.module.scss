@@ -1,0 +1,16 @@
+.field {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.56;
+  filter: blur(0.2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field {
+    opacity: 0.18;
+  }
+}
